@@ -241,12 +241,15 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio"
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-admin"
 	],
 	"file_history":
 	[
-		"/Users/kameronahler/Google Drive/Dev/Project Sedona/css/main.min.css",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-config.php",
 		"/Applications/MAMP/conf/apache/httpd.conf",
+		"/Applications/MAMP/logs/apache_error.log",
+		"/Users/kameronahler/Google Drive/Dev/Project Sedona/css/main.min.css",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/.htaccess",
 		"/Users/kameronahler/Google Drive/Dev/Project Sedona/src/scss/main.scss",
 		"/Users/kameronahler/Google Drive/Dev/Project Sedona/src/index.html",
@@ -370,13 +373,11 @@
 		"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/src/scss/partials/_base.scss",
 		"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/src/scss/partials/icomoon/style.scss",
 		"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/src/scss/partials/icomoon/variables.scss",
-		"/Users/kameronahler/Downloads/icomoon/style.css",
-		"/Users/kameronahler/Downloads/icomoon/style.scss",
-		"/Users/kameronahler/Downloads/icomoon/variables.scss"
+		"/Users/kameronahler/Downloads/icomoon/style.css"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -396,6 +397,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Indexes MultiViews",
+			"override",
+			"phpmyad",
+			"localhost",
+			"kamerondesigns.dev",
 			"#5b5f4c",
 			"$",
 			"weight",
@@ -518,12 +524,7 @@
 			"Draft policy language for each policy topic.",
 			"An overview of key directions for each major <a href=\"/policy-topics\">policy topic</a>, backed up by data and analysis and informed by community input.",
 			"A draft overview of major topics to address in the update, backed up by data and analysis, and informed by community input.",
-			"As City staff begins to add detail to the major themes identified in the Key Directions phase, we’ll be asking for your feedback on the draft policies.",
-			"A draft framework document covering policy topics and high level implementation steps for all major <a href=\"/policy-topics\">policy topics</a> covered by the plan.",
-			"Create draft City policy that is responsive to the key directions and comprehensive in scope.",
-			"During the Key Directions phase, your input will inform key directions that will be outlined through a major public outreach effort in the fall of 2016 and made available for public comment.",
-			"An overview of key directions for each major <a href=\"/policy-topics\">policy topic</a>, backed up by data and analysis and informed by community input.",
-			"Develop and refine key directions, providing the overall structure and outline for the plan."
+			"As City staff begins to add detail to the major themes identified in the Key Directions phase, we’ll be asking for your feedback on the draft policies."
 		],
 		"highlight": true,
 		"in_selection": false,
