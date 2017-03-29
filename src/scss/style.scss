@@ -1,13 +1,24 @@
-/*
- Theme Name:   Tracks Child Theme SCSS
+/*!
+ Theme Name:   Tracks Child Theme
+ Theme URI:    https://www.competethemes.com/tracks/
+ Description:  Kameron Ahler Design Portfolio
+ Author:       Kameron Ahler
+ Author URI:   http://kamerondesigns.com
+ Template:     tracks
+ Version:      1.0.1
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  tracks-child
 */
- 
-// import parent theme first and foremost
-@import url("../tracks/style.min.css");
 
 // mixins
 
+
 // variables
 
+
 // partials
-@import "partials/post";
+@import "partials/vars";
+@import "partials/mixins";
+@import "partials/global";
+@import "partials/header";

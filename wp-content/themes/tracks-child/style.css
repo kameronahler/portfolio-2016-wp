@@ -1,3 +1,14 @@
-@import url("../tracks/style.min.css");
+/*!
+ Theme Name:   Tracks Child Theme
+ Theme URI:    https://www.competethemes.com/tracks/
+ Description:  Kameron Ahler Design Portfolio
+ Author:       Kameron Ahler
+ Author URI:   http://kamerondesigns.com
+ Template:     tracks
+ Version:      1.0.1
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  tracks-child
+*/
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFHQSx1Q0FBdUMiLCJmaWxlIjoic3R5bGUuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiBUaGVtZSBOYW1lOiAgIFRyYWNrcyBDaGlsZCBUaGVtZSBTQ1NTXG4qL1xuQGltcG9ydCB1cmwoXCIuLi90cmFja3Mvc3R5bGUubWluLmNzc1wiKTtcbiJdfQ== */
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7Ozs7Ozs7Ozs7RUFXRSIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiFcbiBUaGVtZSBOYW1lOiAgIFRyYWNrcyBDaGlsZCBUaGVtZVxuIFRoZW1lIFVSSTogICAgaHR0cHM6Ly93d3cuY29tcGV0ZXRoZW1lcy5jb20vdHJhY2tzL1xuIERlc2NyaXB0aW9uOiAgS2FtZXJvbiBBaGxlciBEZXNpZ24gUG9ydGZvbGlvXG4gQXV0aG9yOiAgICAgICBLYW1lcm9uIEFobGVyXG4gQXV0aG9yIFVSSTogICBodHRwOi8va2FtZXJvbmRlc2lnbnMuY29tXG4gVGVtcGxhdGU6ICAgICB0cmFja3NcbiBWZXJzaW9uOiAgICAgIDEuMC4xXG4gTGljZW5zZTogICAgICBHTlUgR2VuZXJhbCBQdWJsaWMgTGljZW5zZSB2MiBvciBsYXRlclxuIExpY2Vuc2UgVVJJOiAgaHR0cDovL3d3dy5nbnUub3JnL2xpY2Vuc2VzL2dwbC0yLjAuaHRtbFxuIFRleHQgRG9tYWluOiAgdHJhY2tzLWNoaWxkXG4qL1xuIl19 */
