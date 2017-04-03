@@ -1,0 +1,100 @@
+/* -----------------------
+top header
+------------------------- */
+
+// background
+.site-header {
+    @include bp(sm) {
+        border-top: initial;
+    }
+
+    // site description
+    .site-description{
+    	color:$color-a;
+
+    	@include bp(md){
+    		font-size:1.25rem;
+    	}
+    }
+}
+
+.site-title {
+    a {
+        color: $color-a;
+
+		&:hover,
+        &:link,
+        &:visited,
+        &:active,
+        &:focus {
+            color: $color-a;
+        }
+    }
+}
+
+.menu-primary-items{
+	li{
+		&::after{
+			color:$color-a;
+
+			@include bp(md){
+				font-size:1rem;
+			}
+		}
+	}
+	a{
+		color:$color-a!important;
+
+		@include bp(md){
+			font-size:1rem;
+		}
+	}
+}
+
+// hamburger
+.toggle-navigation{
+	color: $color-a;
+}
+#toggle-navigation{
+	transition: transform 0.3s ease, opacity .3s ease;
+}
+
+/* -----------------------
+social bar
+------------------------- */
+
+// social bar wrapper
+.top-navigation {
+    background: transparent;
+
+    @include bp(sm) {
+        z-index: auto;
+    }
+    @media (min-width:50em){
+    	padding-top:0;
+    	margin-top:-1.875em;
+    }
+}
+
+//social bar
+.social-media-icons {
+    float: none;
+    width: 100%;
+    text-align: center;
+
+    @include bp(sm) {
+        text-align: right;
+    }
+
+    a{
+    	color:$color-a;
+
+		&:hover,
+	    &:link,
+	    &:visited,
+	    &:active,
+	    &:focus {
+	        color: $color-a;
+	    }
+    }
+}

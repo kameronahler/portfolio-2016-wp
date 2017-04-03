@@ -1,0 +1,32 @@
+@mixin bp($bp){
+	@if $bp=='sm'{@media(min-width:37.5em){@content}}
+	@elseif $bp=='md'{@media(min-width:56.25em){@content}}
+	@elseif $bp=='lg'{@media(min-width:68.75em){@content}}
+	@elseif $bp=='max-xs'{@media(max-width:29.99em){@content}}
+	@elseif $bp=='max-sm'{@media(max-width:37.49em){@content}}
+	@elseif $bp=='max-md'{@media(max-width:56.24em){@content}}
+	@elseif $bp=='max-lg'{@media(max-width:68.74em){@content}}
+}
+
+@mixin flex($justify:null,$align:null){
+	display:flex;
+	justify-content:$justify;
+	align-items:$align;
+}
+
+@mixin clearfix{
+	&::after{
+		content:"";
+		display:table;
+		clear:both;
+	}
+}
+
+@mixin absolute ($top:null, $left:null, $right:null, $bottom:null) {
+	position: absolute;
+	top: $top;
+	left: $left;
+	right: $right;
+	bottom: $bottom;
+	@content;
+}

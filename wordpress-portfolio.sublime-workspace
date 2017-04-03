@@ -99,6 +99,31 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "wp-content/themes/tracks/content-attachment.php",
+			"settings":
+			{
+				"buffer_size": 1051,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scss/partials/_global.scss",
+			"settings":
+			{
+				"buffer_size": 34,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scss/partials/_header.scss",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -242,10 +267,30 @@
 	"expanded_folders":
 	[
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-admin"
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks/content",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child"
 	],
 	"file_history":
 	[
+		"/Users/kameronahler/Google Drive/Dev/EP/css/bp3.min.css",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials/_mixins.scss",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child/header.php",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials/_vars.scss",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/style.scss",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/twentyfifteen/functions.php",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks/inc/scripts.php",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child/functions.php",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials/_global.scss",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials/_post.scss",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child/style.css",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child/sidebar-after-post-content.php",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/.gitignore",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-config.php",
 		"/Applications/MAMP/conf/apache/httpd.conf",
 		"/Applications/MAMP/logs/apache_error.log",
@@ -360,20 +405,7 @@
 		"/Users/kameronahler/Desktop/test/src/src/gruntfile.js",
 		"/Users/kameronahler/Desktop/test/dist/index.php",
 		"/Users/kameronahler/Downloads/Test (copy 01).html",
-		"/Users/kameronahler/Desktop/test/index.php",
-		"/Users/kameronahler/odrive/UIS/Kameron/Design/Project Minneapolis/1st Phase/Code Backups/home_timeline--curent.html",
-		"/Users/kameronahler/odrive/UIS/Kameron/Design/Project Minneapolis/1st Phase/Code Backups/timeline current.html",
-		"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/src/scss/partials/icomoon/icomoon.scss",
-		"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/src/scss/partials/_modals.scss",
-		"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/index-new.html",
-		"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/src/scss/partials/_navbar.scss",
-		"/Users/kameronahler/Downloads/icomoon/demo.html",
-		"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/css/main.min.css",
-		"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/src/scss/main.scss",
-		"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/src/scss/partials/_base.scss",
-		"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/src/scss/partials/icomoon/style.scss",
-		"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/src/scss/partials/icomoon/variables.scss",
-		"/Users/kameronahler/Downloads/icomoon/style.css"
+		"/Users/kameronahler/Desktop/test/index.php"
 	],
 	"find":
 	{
@@ -384,6 +416,7 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks",
 			"/Users/kameronahler/Desktop/test/dist",
 			"/Users/kameronahler/Google Drive/Design/kameronahler.github.io/Site/src/scss",
 			"/Users/kameronahler/Desktop/efowel/wp-content/themes/FAS-THEME/assets/application/scss/skin/components",
@@ -397,6 +430,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"top-navigation",
+			"ct_tracks_social_site_list",
+			"social-media-icons",
+			"enqueue",
+			"style",
+			"wp_enqueue_style",
+			"enqueue",
+			"@media",
 			"Indexes MultiViews",
 			"override",
 			"phpmyad",
@@ -516,15 +557,7 @@
 			"Data Export<",
 			"Data Exports",
 			"        <div>\n            <p>1 User (Limited Access)</p>\n        </div>",
-			"Participants",
-			"Administrators",
-			"No Administrators",
-			" Active",
-			"key directions",
-			"Draft policy language for each policy topic.",
-			"An overview of key directions for each major <a href=\"/policy-topics\">policy topic</a>, backed up by data and analysis and informed by community input.",
-			"A draft overview of major topics to address in the update, backed up by data and analysis, and informed by community input.",
-			"As City staff begins to add detail to the major themes identified in the Key Directions phase, we’ll be asking for your feedback on the draft policies."
+			"Participants"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -564,8 +597,103 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "wp-content/themes/tracks/content-attachment.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1051,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "src/scss/partials/_global.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 34,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								32,
+								32
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-OceanicNext.tmTheme",
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/scss/partials/_header.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-OceanicNext.tmTheme",
+							"open_with_edit": true,
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -586,6 +714,12 @@
 				0,
 				1,
 				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
 			]
 		],
 		"cols":
@@ -596,6 +730,7 @@
 		"rows":
 		[
 			0.0,
+			0.5,
 			1.0
 		]
 	},
@@ -612,7 +747,7 @@
 	"project": "wordpress-portfolio.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -643,9 +778,13 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "color",
+		"last_filter": "ep",
 		"selected_items":
 		[
+			[
+				"ep",
+				"~/Google Drive/Dev/EP/ep.sublime-project"
+			],
 			[
 				"color",
 				"~/Google Drive/Dev/Project Colorado Heritage/colorado heritage.sublime-project"
@@ -702,7 +841,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 238.0,
+	"side_bar_width": 269.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
