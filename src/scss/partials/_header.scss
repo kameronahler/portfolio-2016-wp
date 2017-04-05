@@ -4,6 +4,8 @@ top header
 
 // background
 .site-header {
+    margin-bottom:1rem;
+
     @include bp(sm) {
         border-top: initial;
     }
@@ -12,7 +14,7 @@ top header
     .site-description{
     	color:$color-a;
 
-    	@include bp(md){
+    	@include bp(sm){
     		font-size:1.25rem;
     	}
     }
@@ -72,11 +74,11 @@ social bar
     }
     @media (min-width:50em){
     	padding-top:0;
-    	margin-top:-1.875em;
+    	margin-top:-1.875rem;
     }
 }
 
-//social bar
+// social bar
 .social-media-icons {
     float: none;
     width: 100%;
@@ -88,6 +90,7 @@ social bar
 
     a{
     	color:$color-a;
+        line-height:1;
 
 		&:hover,
 	    &:link,

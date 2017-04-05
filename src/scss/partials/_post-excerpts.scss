@@ -1,0 +1,36 @@
+/* -----------------------
+posts on homepage or category pages
+------------------------- */
+// post wrapper
+.excerpt{
+	@include bp(sm){
+		background:inherit;
+	}
+
+	@include bp(md){
+		margin-bottom:3rem;
+		box-shadow:$box-shadow-postexcerpt;
+		transition: $transition-excerpt;
+		&:hover{
+			box-shadow:$box-shadow-postexcerpt--hover;
+		}
+	}
+
+	// post thumbnail for even thumbnails
+	&.even{
+		.featured-image{
+			right:0;
+			left:initial;
+		}
+		.excerpt-container{
+			float:initial;
+		}
+	}
+
+	// featured image
+	.featured-image{
+		
+	}
+}
+
+

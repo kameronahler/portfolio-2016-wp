@@ -1,10 +1,7 @@
-<?php do_action( 'tracks_main_bottom' ); ?>
 </div> <!-- .main -->
 
 <footer id="site-footer" class="site-footer" role="contentinfo">
-	<h1>
-		<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'title' ); ?></a>
-	</h1>
+
 	<?php if ( get_bloginfo( 'description' ) && ( get_theme_mod( 'tagline_display_setting' ) == 'header-footer' ) || ( get_theme_mod( 'tagline_display_setting' ) == 'footer' ) ) { ?>
 		<p class="site-description">
 			<?php esc_html( bloginfo( 'description' ) ); ?>

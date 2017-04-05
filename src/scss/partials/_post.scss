@@ -1,0 +1,14 @@
+/* -----------------------
+posts
+------------------------- */
+.entry{
+	// featured-image
+	.featured-image{
+		&::after{
+			@include bp(md){
+				content:none;
+			}
+		}
+	}
+
+}

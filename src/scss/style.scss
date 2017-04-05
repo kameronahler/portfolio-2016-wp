@@ -11,14 +11,11 @@
  Text Domain:  tracks-child
 */
 
-// mixins
-
-
-// variables
-
-
 // partials
 @import "partials/vars";
 @import "partials/mixins";
 @import "partials/global";
 @import "partials/header";
+@import "partials/footer";
+@import "partials/post-excerpts";
+@import "partials/post";
