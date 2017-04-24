@@ -9,6 +9,9 @@ top header
     @include bp(sm) {
         border-top: initial;
     }
+    @include bp(md){
+        padding-bottom:0;
+    }
 
     // site description
     .site-description{

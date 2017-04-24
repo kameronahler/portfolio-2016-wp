@@ -1,7 +1,11 @@
 @mixin bp($bp){
+	// 600
 	@if $bp=='sm'{@media(min-width:37.5em){@content}}
+	// 900
 	@elseif $bp=='md'{@media(min-width:56.25em){@content}}
+	// 1100
 	@elseif $bp=='lg'{@media(min-width:68.75em){@content}}
+	
 	@elseif $bp=='max-xs'{@media(max-width:29.99em){@content}}
 	@elseif $bp=='max-sm'{@media(max-width:37.49em){@content}}
 	@elseif $bp=='max-md'{@media(max-width:56.24em){@content}}

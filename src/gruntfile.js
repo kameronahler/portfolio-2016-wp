@@ -1,5 +1,5 @@
 /*
-npm install --save-dev grunt time-grunt grunt-postcss cssnano pixrem autoprefixer css-mqpacker grunt-sass grunt-contrib-uglify grunt-contrib-watch grunt-notify
+npm install --save-dev grunt time-grunt grunt-px-to-rem grunt-postcss cssnano autoprefixer grunt-sass grunt-contrib-uglify grunt-contrib-watch grunt-notify
 */
 module.exports = function(grunt) {
     require('time-grunt')(grunt);
@@ -37,6 +37,43 @@ module.exports = function(grunt) {
             }
         },
 
+        px_to_rem: {
+            dev: {
+                options: {
+                    base: 16,
+                    fallback: false,
+                    fallback_existing_rem: false,
+                    max_decimals:5,
+                    ignore: [],
+                    map: false
+                },
+                files: [{
+                    expand: true,
+                    cwd: '../wp-content/themes/tracks-child',
+                    src: ['*.css'],
+                    dest: '../wp-content/themes/tracks-child',
+                    ext: '.css'
+                }]
+            },
+            build: {
+                options: {
+                    base: 16,
+                    fallback: false,
+                    fallback_existing_rem: false,
+                    max_decimals:5,
+                    ignore: [],
+                    map: false
+                },
+                files: [{
+                    expand: true,
+                    cwd: '../wp-content/themes/tracks-child',
+                    src: ['*.css'],
+                    dest: '../wp-content/themes/tracks-child',
+                    ext: '.css'
+                }]
+            }
+        },
+
         // Post CSS
         postcss: {
             dev: {
@@ -45,13 +82,6 @@ module.exports = function(grunt) {
                     processors: [
                         require('autoprefixer')({
                             browsers: ['last 4 versions', '> .5% in US']
-                        }),
-                        require('css-mqpacker')({
-                            expand: true,
-                            cwd: '../wp-content/themes/tracks-child/',
-                            src: '*.css',
-                            dest: '../wp-content/themes/tracks-child/',
-                            sort:true
                         }),
                         require('cssnano')({
                             calc: false,
@@ -180,16 +210,19 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-notify');
+    grunt.loadNpmTasks('grunt-px-to-rem');
 
     // Register tasks
     grunt.registerTask('default', [
         'sass:dev',
+        'px_to_rem:dev',
         'postcss:dev',
         'uglify:dev'
     ]);
 
     grunt.registerTask('build', [
         'sass:build',
+        'px_to_rem:build',
         'postcss:build',
         'uglify:build'
     ]);
