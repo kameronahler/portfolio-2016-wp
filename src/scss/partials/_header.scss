@@ -21,11 +21,32 @@ top header
     		font-size:1.25rem;
     	}
     }
+
+    &.toggled{
+        .site-description{
+            display:none;
+        }
+        a{
+            color:#fff !important;
+        }
+        .toggle-navigation{
+            color:#fff;
+        }
+    }
 }
 
 .site-title {
     a {
         color: $color-a;
+        font-size:22px;
+
+        @include bp(xxs){
+            font-size:5.41vw;
+        }
+
+        @include bp(xs){
+            font-size: 26px;
+        }
 
 		&:hover,
         &:link,
@@ -49,6 +70,10 @@ top header
 	}
 	a{
 		color:$color-a!important;
+
+        .site-header.toggled &{
+            color:#fff!important;
+        }
 
 		@include bp(md){
 			font-size:1rem;

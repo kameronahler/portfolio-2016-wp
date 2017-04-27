@@ -1,5 +1,5 @@
 /* -----------------------
-posts on homepage or category pages
+post cards on homepage or category pages
 ------------------------- */
 // post wrapper
 .excerpt{
@@ -26,13 +26,20 @@ posts on homepage or category pages
 			float:initial;
 		}
 	}
+}
 
-	// featured image
-	.excerpt-container{
-		@include bp(md){
-			min-height:250px;
-		}
+// featured image
+.excerpt-container{
+	@include bp(md){
+		min-height:250px;
 	}
 }
 
-
+// pseudo border
+.excerpt-header{
+	&::after{
+		height: 3px;
+		width: 30%;
+		box-shadow:$box-shadow-excerpt-border;
+	}
+}

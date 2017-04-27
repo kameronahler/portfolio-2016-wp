@@ -11,4 +11,22 @@ posts
 		}
 	}
 
+	// entry heading border
+	.entry-header{
+		&::after{
+			height:3px;
+		}
+	}
+
+	// meta footer
+	.entry-meta-bottom.float{
+		.entry-categories{
+			@include bp(lg){
+				position:static;
+				padding-left:0;
+				width:100%;
+			}
+		}
+	}
 }
+
