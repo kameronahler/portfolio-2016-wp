@@ -195,7 +195,7 @@ module.exports = function(grunt) {
                     '../wp-content/themes/tracks-child/*.css',
                     '../wp-content/themes/tracks-child/*.js',
                     '../wp-content/themes/tracks-child/*.html',
-                    '../wp-content/themes/tracks-child/*.php'
+                    '../wp-content/themes/**/*.php'
                 ],
                 options: {
                     livereload: true

@@ -28,8 +28,10 @@ posts on homepage or category pages
 	}
 
 	// featured image
-	.featured-image{
-		
+	.excerpt-container{
+		@include bp(md){
+			min-height:250px;
+		}
 	}
 }
 
