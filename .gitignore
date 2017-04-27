@@ -1,3 +1,5 @@
+*.sublime-project
+*.sublime-workspaces
 
 # Created by https://www.gitignore.io/api/node,macos
 

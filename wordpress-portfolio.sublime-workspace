@@ -100,18 +100,29 @@
 	"buffers":
 	[
 		{
-			"file": "wp-content/themes/tracks/functions.php",
+			"contents": "",
+			"file": "src/scss/style.scss",
+			"file_size": 653,
+			"file_write_time": 131374808970000000,
 			"settings":
 			{
-				"buffer_size": 29957,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/scss/style.scss",
+			"file": "src/scss/partials/_header.scss",
 			"settings":
 			{
-				"buffer_size": 596,
+				"buffer_size": 1450,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scss/partials/_mixins.scss",
+			"settings":
+			{
+				"buffer_size": 797,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -120,25 +131,39 @@
 			"file": "src/scss/partials/_vars.scss",
 			"settings":
 			{
-				"buffer_size": 254,
+				"buffer_size": 256,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "src/scss/partials/_mixins.scss",
+			"contents": "",
+			"file": "src/scss/partials/_categories.scss",
+			"file_size": 650,
+			"file_write_time": 131374798290000000,
 			"settings":
 			{
-				"buffer_size": 770,
-				"encoding": "UTF-8",
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "wp-content/themes/tracks-child/style.css",
+			"contents": "",
+			"file": "wp-content/themes/tracks-child/content.php",
+			"file_size": 806,
+			"file_write_time": 131374807210000000,
 			"settings":
 			{
-				"buffer_size": 7199,
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/scss/partials/_entry.scss",
+			"settings":
+			{
+				"buffer_size": 48,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -284,37 +309,34 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-includes"
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio"
 	],
 	"file_history":
 	[
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child/functions.php",
+		"/Users/kameronahler/Desktop/functions 2.php",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks/functions.php",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-admin/admin.php",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/gruntfile.js",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child/style.css",
+		"/Users/kameronahler/Google Drive/Dev/_Github/_Boilerplate/gruntfile.js",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/package.json",
+		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials/_mixins.scss",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials/_post-excerpts.scss",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials/_header.scss",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials/_global.scss",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials/_footer.scss",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials/_post.scss",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child/content.php",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child/functions.php",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks/functions.php",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/gruntfile.js",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child/footer.php",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks/footer.php",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child/header.php",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks/header.php",
 		"/Users/kameronahler/Google Drive/Dev/EP/css/bp3.min.css",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials/_mixins.scss",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/partials/_vars.scss",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/src/scss/style.scss",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/twentyfifteen/functions.php",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks/inc/scripts.php",
-		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child/style.css",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-content/themes/tracks-child/sidebar-after-post-content.php",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/.gitignore",
 		"/Users/kameronahler/Google Drive/Dev/_Github/wordpress-portfolio/wp-config.php",
@@ -418,11 +440,7 @@
 		"/Users/kameronahler/Google Drive/Dev/Project Madison RTP/src/html/budget-bar.html",
 		"/Users/kameronahler/Desktop/test/dist/wp-content/themes/test/index.php",
 		"/Users/kameronahler/Desktop/test/dist/wp-content/themes/test/template-parts/content-page.php",
-		"/Users/kameronahler/Desktop/test/gruntfile.js",
-		"/Users/kameronahler/Desktop/test/src/scss/main.scss",
-		"/Users/kameronahler/Desktop/test/src/scss/partials/_variables.scss",
-		"/Users/kameronahler/Desktop/test/dist/wp-content/themes/test/functions.php",
-		"/Users/kameronahler/Desktop/test/src/scss/partials/_resets.scss"
+		"/Users/kameronahler/Desktop/test/gruntfile.js"
 	],
 	"find":
 	{
@@ -449,6 +467,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"lg",
+			"px",
 			"entry-meta",
 			"loop-container",
 			"class=\"featured-image\"",
@@ -574,9 +594,7 @@
 			"branding",
 			"h1",
 			"bp(min-xs)",
-			"bp(min-lg)",
-			"bp(min-md)",
-			"bp(min-sm)"
+			"bp(min-lg)"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -616,31 +634,61 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "wp-content/themes/tracks/functions.php",
+					"file": "src/scss/style.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 29957,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7758,
-								7758
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-OceanicNext.tmTheme",
-							"syntax": "Packages/PHP/PHP.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/scss/partials/_header.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1450,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								423,
+								423
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-OceanicNext.tmTheme",
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -650,78 +698,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "src/scss/style.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 596,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								391,
-								391
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-OceanicNext.tmTheme",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
 					"buffer": 2,
-					"file": "src/scss/partials/_vars.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 254,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								109,
-								109
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-OceanicNext.tmTheme",
-							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "src/scss/partials/_mixins.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 770,
+						"buffer_size": 797,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								418,
-								418
+								0,
+								0
 							]
 						],
 						"settings":
@@ -738,41 +728,129 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "wp-content/themes/tracks-child/style.css",
+					"buffer": 3,
+					"file": "src/scss/partials/_vars.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7199,
+						"buffer_size": 256,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								870,
-								870
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-OceanicNext.tmTheme",
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 234.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
 		},
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 4,
+					"file": "src/scss/partials/_categories.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-OceanicNext.tmTheme",
+							"open_with_edit": true,
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 71.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "wp-content/themes/tracks-child/content.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "src/scss/partials/_entry.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 48,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								48,
+								48
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Material-Theme-OceanicNext.tmTheme",
+							"open_with_edit": true,
+							"syntax": "Packages/Syntax Highlighting for Sass/Syntaxes/SCSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -809,7 +887,7 @@
 		"rows":
 		[
 			0.0,
-			0.5,
+			0.568789587642,
 			1.0
 		]
 	},
@@ -857,7 +935,7 @@
 	"select_project":
 	{
 		"height": 500.0,
-		"last_filter": "uis dev",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -928,7 +1006,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 269.0,
+	"side_bar_width": 231.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
