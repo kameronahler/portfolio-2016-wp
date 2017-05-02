@@ -21,20 +21,25 @@ posts
 	}
 
 	// meta footer
-	.entry-categories{
-		@include bp(lg){
+	.entry-meta-bottom.float{
+		.entry-categories{
+			width:100%;
 			position:static;
 			padding-left:0;
-			width:100%;
-		}
 
-		p{
-			text-align:center;
-		}
+			p{
+				text-align:center;
+			}
 
-		a{
-			font-weight:700;
-			font-size:1rem;
+			a{
+				font-weight:700;
+				font-size:1rem;
+				text-decoration:underline;
+
+				@include bp(lg){
+					text-transform:uppercase;
+				}
+			}
 		}
 	}
 }

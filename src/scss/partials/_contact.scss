@@ -1,0 +1,94 @@
+.page-id-29 {
+    .wpforms-container-full .wpforms-form {
+		
+		// top text input wrapper row
+		.wpforms-field-row.wpforms-field-medium{
+			max-width:initial;
+		}
+
+		// top text input wrappers inside row
+        .wpforms-one-half {
+            margin-left: 0;
+            width: 100%;
+
+            @include bp(sm){
+            	width:48%;
+            }
+
+            &:not(.wpforms-first){
+            	@include bp(sm){
+            		margin-left:4%;
+            	}
+            }
+        }
+
+		// text inputs
+    	input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]) {
+    		outline:1px solid #ccc;
+    		margin-top: 1rem;
+    		max-width:initial;
+
+    	    &:focus {
+    	        outline-offset: 0;
+    	        outline:1px solid #000;
+    	        box-shadow: $box-shadow-input--focus;
+
+    	        ~ label {
+    	        	@include bp(sm){
+    	        		font-weight:700;
+    	        	}
+    	        }
+    	    }
+    	}
+
+    	// email
+	    .wpforms-field-email {
+	        input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="file"]):not([type="image"]) {
+	            max-width: initial;
+	            margin-top: 1rem;
+	        }
+	    }
+		
+		// textarea
+	    textarea{
+	    	border-radius:0;
+	    	max-width:100%;
+
+	    	&:focus{
+	    		border-color:#000;
+	    		box-shadow: $box-shadow-input--focus;
+	    	}
+	    }
+		
+		// button wrapper
+	    .wpforms-submit-container{
+	    	text-align:center;
+
+	    	@include bp(sm){
+	    		text-align:right;
+	    	}
+	    }
+
+		// button
+	    button[type=submit]{
+			border:none;
+			box-shadow:$box-shadow-button;
+			transition:.2s ease;
+
+			@include bp(sm){
+				padding:10px 20px;
+			}
+
+			&:focus{
+				outline:1px solid #000;
+			}
+			&:active{
+				border:none;
+				box-shadow:$box-shadow-button--hover;
+			}
+			&:hover{
+				border:none;
+			}
+	    }
+    }
+}
