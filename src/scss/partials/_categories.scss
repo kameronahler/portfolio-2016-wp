@@ -40,6 +40,8 @@
 		@include bp(md){
 			margin:0;
 			width:100%;
+			min-height:initial;
+			padding:0 1.5rem;
 		}
 	}
 	.excerpt-meta{

@@ -2,6 +2,8 @@
 posts
 ------------------------- */
 .entry{
+	box-shadow: $box-shadow-content;
+	
 	// featured-image
 	.featured-image{
 		&::after{
@@ -19,13 +21,20 @@ posts
 	}
 
 	// meta footer
-	.entry-meta-bottom.float{
-		.entry-categories{
-			@include bp(lg){
-				position:static;
-				padding-left:0;
-				width:100%;
-			}
+	.entry-categories{
+		@include bp(lg){
+			position:static;
+			padding-left:0;
+			width:100%;
+		}
+
+		p{
+			text-align:center;
+		}
+
+		a{
+			font-weight:700;
+			font-size:1rem;
 		}
 	}
 }

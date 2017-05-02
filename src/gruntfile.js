@@ -81,7 +81,7 @@ module.exports = function(grunt) {
                     map:true,
                     processors: [
                         require('autoprefixer')({
-                            browsers: ['last 4 versions', '> .5% in US']
+                            browsers: ['last 4 versions', '> .25% in US']
                         }),
                         require('cssnano')({
                             calc: false,
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
                     map:false,
                     processors: [
                         require('autoprefixer')({
-                            browsers: ['last 4 versions', '> .5% in US']
+                            browsers: ['last 4 versions', '> .25% in US']
                         }),
                         require('pixrem')({
                             rootValue: '16px'

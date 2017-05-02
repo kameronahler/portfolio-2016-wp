@@ -17,29 +17,30 @@ post cards on homepage or category pages
 	}
 
 	// post thumbnail for even thumbnails
-	&.even{
-		.featured-image{
-			right:0;
-			left:initial;
-		}
-		.excerpt-container{
-			float:initial;
-		}
-	}
+	// &.even{
+	// 	.featured-image{
+	// 		right:0;
+	// 		left:initial;
+	// 	}
+	// 	.excerpt-container{
+	// 		float:initial;
+	// 	}
+	// }
 }
 
-// featured image
+// text wrapper
 .excerpt-container{
 	@include bp(md){
-		min-height:250px;
+		min-height:312px;
 	}
 }
 
 // pseudo border
 .excerpt-header{
 	&::after{
-		height: 3px;
-		width: 30%;
-		box-shadow:$box-shadow-excerpt-border;
+		height: 2px;
+		width: 33.33334%;
+		background: #eee;
+		// box-shadow:$box-shadow-excerpt-border;
 	}
 }
