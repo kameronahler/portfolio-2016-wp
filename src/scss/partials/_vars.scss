@@ -5,10 +5,10 @@ $color-a: #000;
 $transition-link: .2s ease;
 $transition-excerpt: .3s ease;
 
+$box-shadow-content: 0 15px 25px -15px rgba(0,0,0,.2);
 $box-shadow-button: 0 10px 15px -5px rgba(black,.2);
 $box-shadow-button--hover: 0 10px 15px -10px rgba(black,.2);
-$box-shadow-postexcerpt: 0 1.125rem 1.5rem -.875rem rgba(black,.2);
 $box-shadow-excerpt-border: 0 2px 2px rgba(black,.17);
-$box-shadow-postexcerpt--hover: 0 1.125rem 1.5rem -.875rem rgba(black,.22);
-$box-shadow-content: 0 15px 25px -15px rgba(0,0,0,.2);
+$box-shadow-postexcerpt: 0 18px 24px -14px rgba(black,.2);
+$box-shadow-postexcerpt--hover: 0 18px 24px -14px rgba(black,.22);
 $box-shadow-input--focus: 0 1px 4px rgba(black,.2);
