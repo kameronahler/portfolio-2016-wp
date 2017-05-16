@@ -1,46 +1,269 @@
 /* -----------------------
 posts
 ------------------------- */
-.entry{
-	box-shadow: $box-shadow-content;
-	
-	// featured-image
-	.featured-image{
-		&::after{
-			@include bp(md){
-				content:none;
+
+.entry {
+    box-shadow: $box-shadow-content;
+    // featured-image
+    .featured-image {
+        &::after {
+            @include bp(md) {
+                content: none;
+            }
+        }
+    }
+    // entry heading border
+    .entry-header {
+        &::after {
+            height: 3px;
+            background: #eee;
+        }
+    }
+    // meta footer for all posts
+    .entry-meta-bottom {
+    	position:relative;
+    	padding-top:32px;
+
+        &::before{
+        	@include absolute(0,0,0);
+        	content:"";
+        	display:block;
+        	width:4.5em;
+        	height: 3px;
+        	margin:0 auto;
+        	background-color:#eee
+
+        }
+        .entry-categories {
+            width: 100%;
+            position: static;
+            padding-left: 0;
+            p {
+                text-align: center;
+                margin-bottom:0;
+                margin-top:0;
+            }
+            a {
+				margin-right:0;
+                font-size: 0.813em;
+                font-weight:300;
+                // text-decoration: underline;
+                text-transform: uppercase;
+            }
+
+        }
+    }
+    // further reading nav
+    .further-reading{
+		.prev,
+		.next{
+			text-align:center;
+			@include bp(sm){
+				margin-top:0;
 			}
 		}
-	}
-
-	// entry heading border
-	.entry-header{
-		&::after{
-			height:3px;
-		}
-	}
-
-	// meta footer
-	.entry-meta-bottom.float{
-		.entry-categories{
-			width:100%;
-			position:static;
-			padding-left:0;
-
-			p{
-				text-align:center;
-			}
-
-			a{
-				font-weight:700;
-				font-size:1rem;
-				text-decoration:underline;
-
-				@include bp(lg){
-					text-transform:uppercase;
-				}
+		.prev{
+			@include bp(sm){
+				text-align:left;
+				padding-right:4em
 			}
 		}
-	}
+		.next{
+			@include bp(sm){
+				text-align:right;
+				padding-left:4em
+			}
+		}
+    }
 }
 
+
+/* -----------------------
+vertical rhythm - from gridlover.net -- post only
+------------------------- */
+
+.entry-container {
+    article {
+        font-size: 15px;
+        line-height: 26px;
+        .alignright,
+        .alignleft,
+        .aligncenter,
+        .alignnone,
+        .size-auto,
+        .size-full,
+        .size-large,
+        .size-medium,
+        .size-thumbnail {
+            margin-top: 26px;
+            margin-bottom: 26px;
+        }
+        h1,
+        .h1 {
+            font-size: 51px;
+            line-height: 52px;
+            margin-top: 26px;
+            margin-bottom: 52px;
+        }
+        h2,
+        .h2 {
+            font-size: 34px;
+            line-height: 52px;
+            margin-top: 26px;
+            margin-bottom: 26px;
+        }
+        h3,
+        .h3 {
+            font-size: 23px;
+            line-height: 26px;
+            margin-top: 26px;
+            margin-bottom: 0px;
+        }
+        h4,
+        .h4 {
+            font-size: 15px;
+            line-height: 26px;
+            margin-top: 26px;
+            margin-bottom: 0px;
+        }
+        h5,
+        .h5 {
+            font-size: 15px;
+            line-height: 26px;
+            margin-top: 26px;
+            margin-bottom: 0px;
+        }
+        p,
+        ul,
+        ol,
+        pre,
+        table,
+        blockquote {
+            margin-top: 0px;
+            margin-bottom: 26px;
+        }
+        ul ul,
+        ol ol,
+        ul ol,
+        ol ul {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        /* Let's make sure all's aligned */
+        hr,
+        .hr {
+            border: 1pxi solid;
+            margin: -1pxi 0;
+        }
+        a,
+        b,
+        i,
+        strong,
+        em,
+        small,
+        code {
+            line-height: 0;
+        }
+        sub,
+        sup {
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+        sup {
+            top: -0.5em;
+        }
+        sub {
+            bottom: -0.25em;
+        }
+    }
+    @include bp(sm) {
+        article {
+            font-size: 18px;
+            line-height: 32px;
+
+            .alignright, .alignleft, .aligncenter, .alignnone, .size-auto, .size-full, .size-large, .size-medium, .size-thumbnail{
+            	margin-top:32px;
+            	margin-bottom:32px;
+            }
+            h1,
+            .h1 {
+                font-size: 61px;
+                line-height: 64px;
+                margin-top: 32px;
+                margin-bottom: 64px;
+            }
+            h2,
+            .h2 {
+                font-size: 41px;
+                line-height: 64px;
+                margin-top: 32px;
+                margin-bottom: 32px;
+            }
+            h3,
+            .h3 {
+                font-size: 27px;
+                line-height: 32px;
+                margin-top: 32px;
+                margin-bottom: 0px;
+            }
+            h4,
+            .h4 {
+                font-size: 18px;
+                line-height: 32px;
+                margin-top: 32px;
+                margin-bottom: 0px;
+            }
+            h5,
+            .h5 {
+                font-size: 18px;
+                line-height: 32px;
+                margin-top: 32px;
+                margin-bottom: 0px;
+            }
+            p,
+            ul,
+            ol,
+            pre,
+            table,
+            blockquote {
+                margin-top: 0px;
+                margin-bottom: 32px;
+            }
+            ul ul,
+            ol ol,
+            ul ol,
+            ol ul {
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            /* Let's make sure all's aligned */
+            hr,
+            .hr {
+                border: 1pxi solid;
+                margin: -1pxi 0;
+            }
+            a,
+            b,
+            i,
+            strong,
+            em,
+            small,
+            code {
+                line-height: 0;
+            }
+            sub,
+            sup {
+                line-height: 0;
+                position: relative;
+                vertical-align: baseline;
+            }
+            sup {
+                top: -0.5em;
+            }
+            sub {
+                bottom: -0.25em;
+            }
+        }
+    }
+}

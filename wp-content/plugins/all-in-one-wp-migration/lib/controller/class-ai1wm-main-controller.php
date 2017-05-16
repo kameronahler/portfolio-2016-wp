@@ -153,7 +153,7 @@ class Ai1wm_Main_Controller {
 		add_filter( 'ai1wm_import', 'Ai1wm_Import_Blogs::execute', 150 );
 		add_filter( 'ai1wm_import', 'Ai1wm_Import_Enumerate::execute', 200 );
 		add_filter( 'ai1wm_import', 'Ai1wm_Import_Content::execute', 250 );
-		add_filter( 'ai1wm_import', 'Ai1wm_Import_Plugins::execute', 270 );
+		add_filter( 'ai1wm_import', 'Ai1wm_Import_Mu_Plugins::execute', 270 );
 		add_filter( 'ai1wm_import', 'Ai1wm_Import_Database::execute', 300 );
 		add_filter( 'ai1wm_import', 'Ai1wm_Import_Done::execute', 350 );
 		add_filter( 'ai1wm_import', 'Ai1wm_Import_Clean::execute', 400 );

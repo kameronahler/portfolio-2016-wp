@@ -35,6 +35,9 @@ class Ai1wm_Export_Controller {
 		// Set error handler
 		@set_error_handler( 'Ai1wm_Handler::error' );
 
+		// Set shutdown handler
+		@register_shutdown_function( 'Ai1wm_Handler::shutdown' );
+
 		// Set params
 		if ( empty( $params ) ) {
 			$params = ai1wm_urldecode( $_REQUEST );
@@ -65,8 +68,8 @@ class Ai1wm_Export_Controller {
 		if ( isset( $wp_filter['ai1wm_export'] ) && ( $filters = $wp_filter['ai1wm_export'] ) ) {
 			// WordPress 4.7 introduces new class for working with filters/actions called WP_Hook
 			// which adds another level of abstraction and we need to address it.
-			if ( is_object( $filters ) ) {
-				$filters = current( $filters );
+			if ( isset( $filters->callbacks ) ) {
+				$filters = $filters->callbacks;
 			}
 
 			ksort( $filters );

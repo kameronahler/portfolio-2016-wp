@@ -19,6 +19,7 @@
 
 		<div class='entry-meta-bottom'>
 			<?php get_template_part( 'content/category-links' ); ?>
+			<?php get_template_part( 'content/further-reading' ); ?>
 		</div>
 		<?php get_template_part( 'content/author-meta' ); ?>
 	</div>

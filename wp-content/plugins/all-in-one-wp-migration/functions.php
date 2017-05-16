@@ -220,6 +220,16 @@ function ai1wm_download_bytes( $params ) {
 }
 
 /**
+ * Get database size in bytes
+ *
+ * @param  array   $params Request parameters
+ * @return integer
+ */
+function ai1wm_database_bytes( $params ) {
+	return filesize( ai1wm_database_path( $params ) );
+}
+
+/**
  * Get archive size as text
  *
  * @param  array  $params Request parameters
@@ -671,6 +681,44 @@ function ai1wm_activate_plugins( $plugins ) {
 	sort( $current );
 
 	return update_option( AI1WM_ACTIVE_PLUGINS, $current );
+}
+
+/**
+ * Get active template
+ *
+ * @return string
+ */
+function ai1wm_active_template() {
+	return get_option( AI1WM_ACTIVE_TEMPLATE );
+}
+
+/**
+ * Get active stylesheet
+ *
+ * @return string
+ */
+function ai1wm_active_stylesheet() {
+	return get_option( AI1WM_ACTIVE_STYLESHEET );
+}
+
+/**
+ * Set active template
+ *
+ * @param  string  $template Template name
+ * @return boolean
+ */
+function ai1wm_activate_template( $template ) {
+	return update_option( AI1WM_ACTIVE_TEMPLATE, $template );
+}
+
+/**
+ * Set active stylesheet
+ *
+ * @param  string  $stylesheet Stylesheet name
+ * @return boolean
+ */
+function ai1wm_activate_stylesheet( $stylesheet ) {
+	return update_option( AI1WM_ACTIVE_STYLESHEET, $stylesheet );
 }
 
 /**

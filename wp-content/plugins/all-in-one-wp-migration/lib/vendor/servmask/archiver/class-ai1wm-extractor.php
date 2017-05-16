@@ -36,17 +36,17 @@ class Ai1wm_Extractor extends Ai1wm_Archiver {
 	}
 
 	/**
-	 * Get the total files in an archive
+	 * Get the total files count in an archive
 	 *
-	 * @return int Total files in the archive
+	 * @return int Total files count in the archive
 	 * @throws \Ai1wm_Not_Accesible_Exception
 	 * @throws \Ai1wm_Not_Readable_Exception
 	 */
-	public function get_total_files() {
+	public function get_total_files_count() {
 		fseek( $this->file_handle, SEEK_SET, 0 );
 
-		// total files
-		$total_files = 0;
+		// total files count
+		$total_files_count = 0;
 
 		while ( $block = $this->read_from_handle( $this->file_handle, 4377 ) ) {
 			// end block has been reached
@@ -58,27 +58,27 @@ class Ai1wm_Extractor extends Ai1wm_Archiver {
 			$data = $this->get_data_from_block( $block );
 
 			// we have a file, increment the counter
-			$total_files++;
+			$total_files_count++;
 
 			// skip file content so we can move forward to the next file
 			$this->set_file_pointer( $this->file_handle, $data['size'] );
 		}
 
-		return $total_files;
+		return $total_files_count;
 	}
 
 	/**
-	 * Get the total size of files in an archive
+	 * Get the total files size in an archive
 	 *
-	 * @return int Total size of files in the archive
+	 * @return int Total files size in the archive
 	 * @throws \Ai1wm_Not_Accesible_Exception
 	 * @throws \Ai1wm_Not_Readable_Exception
 	 */
-	public function get_total_size() {
+	public function get_total_files_size() {
 		fseek( $this->file_handle, SEEK_SET, 0 );
 
-		// total size
-		$total_size = 0;
+		// total files size
+		$total_files_size = 0;
 
 		while ( $block = $this->read_from_handle( $this->file_handle, 4377 ) ) {
 			// end block has been reached
@@ -90,13 +90,13 @@ class Ai1wm_Extractor extends Ai1wm_Archiver {
 			$data = $this->get_data_from_block( $block );
 
 			// we have a file, increment the counter
-			$total_size += $data['size'];
+			$total_files_size += $data['size'];
 
 			// skip file content so we can move forward to the next file
 			$this->set_file_pointer( $this->file_handle, $data['size'] );
 		}
 
-		return $total_size;
+		return $total_files_size;
 	}
 
 	public function extract_one_file_to( $location, $exclude = array(), $old_paths = array(), $new_paths = array(), $offset = 0, $timeout = 0 ) {
@@ -131,7 +131,7 @@ class Ai1wm_Extractor extends Ai1wm_Archiver {
 
 		// should we skip this file?
 		for ( $i = 0; $i < count( $exclude ); $i++ ) {
-			if ( strpos( $filename . DIRECTORY_SEPARATOR, $exclude[$i] . DIRECTORY_SEPARATOR ) === 0 ) {
+			if ( strpos( $filename . DIRECTORY_SEPARATOR, $exclude[ $i ] . DIRECTORY_SEPARATOR ) === 0 ) {
 				$this->set_file_pointer( $this->file_handle, $data['size'] );
 				return;
 			}
@@ -139,8 +139,8 @@ class Ai1wm_Extractor extends Ai1wm_Archiver {
 
 		// replace extract paths
 		for ( $i = 0; $i < count( $old_paths ); $i++ ) {
-			if ( strpos( $path . DIRECTORY_SEPARATOR, $old_paths[$i] . DIRECTORY_SEPARATOR ) === 0 ) {
-				$path = substr_replace( $path, $new_paths[$i], 0, strlen( $old_paths[$i] ) );
+			if ( strpos( $path . DIRECTORY_SEPARATOR, $old_paths[ $i ] . DIRECTORY_SEPARATOR ) === 0 ) {
+				$path = substr_replace( $path, $new_paths[ $i ], 0, strlen( $old_paths[ $i ] ) );
 				break;
 			}
 		}
@@ -210,7 +210,7 @@ class Ai1wm_Extractor extends Ai1wm_Archiver {
 
 			// files to extract
 			for ( $i = 0; $i < count( $files ); $i++ ) {
-				if ( strpos( $filename . DIRECTORY_SEPARATOR, $files[$i] . DIRECTORY_SEPARATOR ) === 0 ) {
+				if ( strpos( $filename . DIRECTORY_SEPARATOR, $files[ $i ] . DIRECTORY_SEPARATOR ) === 0 ) {
 					$include = true;
 					break;
 				}
