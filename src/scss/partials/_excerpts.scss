@@ -34,6 +34,12 @@ post cards on homepage or category pages
 		min-height:312px;
 	}
 }
+// title
+.excerpt-title{
+	@include bp(sm){
+		line-height:1.2;
+	}
+}
 
 // pseudo border
 .excerpt-header{
