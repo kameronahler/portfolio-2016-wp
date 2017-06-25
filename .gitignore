@@ -1,6 +1,7 @@
 *.sublime-project
 *.sublime-workspaces
 backup/
+wp-content/uploads/
 
 # Created by https://www.gitignore.io/api/node,macos
 

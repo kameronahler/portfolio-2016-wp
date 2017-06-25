@@ -359,7 +359,7 @@ class Ai1wm_Main_Controller {
 	 * @return void
 	 */
 	public function register_export_scripts_and_styles( $hook ) {
-		if ( 'toplevel_page_site-migration-export' !== $hook ) {
+		if ( 'toplevel_page_site-migration-export' !== strtolower( $hook ) ) {
 			return;
 		}
 
@@ -395,7 +395,7 @@ class Ai1wm_Main_Controller {
 				'url' => wp_make_link_relative( admin_url( 'admin-ajax.php?action=ai1wm_export' ) ),
 			),
 			'status' => array(
-				'url' => wp_make_link_relative( admin_url( 'admin-ajax.php?action=ai1wm_status' ) ),
+				'url' => wp_make_link_relative( add_query_arg( array( 'secret_key' => get_option( AI1WM_SECRET_KEY ) ), admin_url( 'admin-ajax.php?action=ai1wm_status' ) ) ),
 			),
 			'secret_key' => get_option( AI1WM_SECRET_KEY ),
 		) );
@@ -407,7 +407,7 @@ class Ai1wm_Main_Controller {
 	 * @return void
 	 */
 	public function register_import_scripts_and_styles( $hook ) {
-		if ( 'all-in-one-wp-migration_page_site-migration-import' !== $hook ) {
+		if ( 'all-in-one-wp-migration_page_site-migration-import' !== strtolower( $hook ) ) {
 			return;
 		}
 
@@ -456,7 +456,7 @@ class Ai1wm_Main_Controller {
 				'url' => wp_make_link_relative( admin_url( 'admin-ajax.php?action=ai1wm_import' ) ),
 			),
 			'status' => array(
-				'url' => wp_make_link_relative( admin_url( 'admin-ajax.php?action=ai1wm_status' ) ),
+				'url' => wp_make_link_relative( add_query_arg( array( 'secret_key' => get_option( AI1WM_SECRET_KEY ) ), admin_url( 'admin-ajax.php?action=ai1wm_status' ) ) ),
 			),
 			'secret_key' => get_option( AI1WM_SECRET_KEY ),
 			'oversize'   => sprintf(
@@ -490,7 +490,7 @@ class Ai1wm_Main_Controller {
 	 * @return void
 	 */
 	public function register_backups_scripts_and_styles( $hook ) {
-		if ( 'all-in-one-wp-migration_page_site-migration-backups' !== $hook ) {
+		if ( 'all-in-one-wp-migration_page_site-migration-backups' !== strtolower( $hook ) ) {
 			return;
 		}
 
@@ -531,7 +531,7 @@ class Ai1wm_Main_Controller {
 				'url' => wp_make_link_relative( admin_url( 'admin-ajax.php?action=ai1wm_import' ) ),
 			),
 			'status' => array(
-				'url' => wp_make_link_relative( admin_url( 'admin-ajax.php?action=ai1wm_status' ) ),
+				'url' => wp_make_link_relative( add_query_arg( array( 'secret_key' => get_option( AI1WM_SECRET_KEY ) ), admin_url( 'admin-ajax.php?action=ai1wm_status' ) ) ),
 			),
 			'secret_key' => get_option( AI1WM_SECRET_KEY ),
 		) );
@@ -543,7 +543,7 @@ class Ai1wm_Main_Controller {
 	 * @return void
 	 */
 	public function register_updater_scripts_and_styles( $hook ) {
-		if ( 'plugins.php' !== $hook ) {
+		if ( 'plugins.php' !== strtolower( $hook ) ) {
 			return;
 		}
 
@@ -614,34 +614,28 @@ class Ai1wm_Main_Controller {
 	 * @return void
 	 */
 	public function router() {
-		// Public
+		// Public actions
 		add_action( 'wp_ajax_nopriv_ai1wm_export', 'Ai1wm_Export_Controller::export' );
 		add_action( 'wp_ajax_nopriv_ai1wm_import', 'Ai1wm_Import_Controller::import' );
 		add_action( 'wp_ajax_nopriv_ai1wm_status', 'Ai1wm_Status_Controller::status' );
 		add_action( 'wp_ajax_nopriv_ai1wm_resolve', 'Ai1wm_Resolve_Controller::resolve' );
+
+		// Private actions
+		add_action( 'wp_ajax_ai1wm_export', 'Ai1wm_Export_Controller::export' );
+		add_action( 'wp_ajax_ai1wm_import', 'Ai1wm_Import_Controller::import' );
+		add_action( 'wp_ajax_ai1wm_status', 'Ai1wm_Status_Controller::status' );
+		add_action( 'wp_ajax_ai1wm_resolve', 'Ai1wm_Resolve_Controller::resolve' );
 
 		// Update
 		if ( current_user_can( 'update_plugins' ) ) {
 			add_action( 'wp_ajax_ai1wm_updater', 'Ai1wm_Updater_Controller::updater' );
 		}
 
-		// Export
-		if ( current_user_can( 'export' ) ) {
-			add_action( 'wp_ajax_ai1wm_export', 'Ai1wm_Export_Controller::export' );
-		}
-
-		// Import
-		if ( current_user_can( 'import' ) ) {
-			add_action( 'wp_ajax_ai1wm_import', 'Ai1wm_Import_Controller::import' );
-		}
-
-		// Both
+		// Delete backup, send feedback and report problem
 		if ( current_user_can( 'export' ) || current_user_can( 'import' ) ) {
 			add_action( 'wp_ajax_ai1wm_backups', 'Ai1wm_Backups_Controller::delete' );
 			add_action( 'wp_ajax_ai1wm_feedback', 'Ai1wm_Feedback_Controller::feedback' );
 			add_action( 'wp_ajax_ai1wm_report', 'Ai1wm_Report_Controller::report' );
-			add_action( 'wp_ajax_ai1wm_status', 'Ai1wm_Status_Controller::status' );
-			add_action( 'wp_ajax_ai1wm_resolve', 'Ai1wm_Resolve_Controller::resolve' );
 		}
 	}
 

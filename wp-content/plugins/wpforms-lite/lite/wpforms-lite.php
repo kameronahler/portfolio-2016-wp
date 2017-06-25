@@ -24,6 +24,7 @@ class WPForms_Lite {
 		add_action( 'wpforms_admin_page',                  array( $this, 'entries_page'                )        );
 		add_action( 'admin_enqueue_scripts',               array( $this, 'addon_page_enqueues'         )        );
 		add_action( 'wpforms_admin_page',                  array( $this, 'addons_page'                 )        );
+		add_action( 'wpforms_providers_panel_sidebar', 	   array( $this, 'builder_provider_sidebar'    ), 20    );
 	}
 
 	/**
@@ -441,6 +442,50 @@ class WPForms_Lite {
 				'upgrade_url'       => $this->upgrade_link()
 			)
 		);
+	}
+
+	/**
+	 * Display other providers available with paid license.
+	 *
+	 * @since 1.3.8
+	 */
+	public function builder_provider_sidebar() {
+
+		$providers = array(
+			array(
+				'name' => 'AWeber',
+				'slug' => 'aweber',
+				'img'  => 'addon-icon-aweber.png',
+			),
+			array(
+				'name' => 'Campaign Monitor',
+				'slug' => 'campaign-monitor',
+				'img'  => 'addon-icon-campaign-monitor.png',
+			),
+			array(
+				'name' => 'GetResponse',
+				'slug' => 'getresponse',
+				'img'  => 'addon-icon-getresponse.png',
+			),
+			array(
+				'name' => 'MailChimp',
+				'slug' => 'mailchimp',
+				'img'  => 'addon-icon-mailchimp.png',
+			),
+			array(
+				'name' => 'Zapier',
+				'slug' => 'zapier',
+				'img'  => 'addon-icon-zapier.png',
+			),
+		);
+
+		foreach ( $providers as $provider ) {
+			echo '<a href="#" class="wpforms-panel-sidebar-section icon wpforms-panel-sidebar-section-' . esc_attr( $provider['slug'] ) . ' upgrade-modal" data-name="' . esc_attr( $provider['name'] ) . '">';
+				echo '<img src="' . WPFORMS_PLUGIN_URL . 'lite/assets/images/' . $provider['img'] . '">';
+				echo esc_html( $provider['name'] );
+				echo '<i class="fa fa-angle-right wpforms-toggle-arrow"></i>';
+			echo '</a>';
+		}
 	}
 
 

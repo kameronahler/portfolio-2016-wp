@@ -40,7 +40,7 @@ class Ai1wm_Export_Controller {
 
 		// Set params
 		if ( empty( $params ) ) {
-			$params = ai1wm_urldecode( $_REQUEST );
+			$params = stripslashes_deep( $_REQUEST );
 		}
 
 		// Set priority
@@ -55,12 +55,11 @@ class Ai1wm_Export_Controller {
 			$secret_key = $params['secret_key'];
 		}
 
-		// Verify secret key by using the value in the database, not in cache
-		if ( $secret_key !== get_option( AI1WM_SECRET_KEY ) ) {
-			Ai1wm_Status::error(
-				sprintf( __( 'Unable to authenticate your request with secret_key = "%s"', AI1WM_PLUGIN_NAME ), $secret_key ),
-				__( 'Unable to export', AI1WM_PLUGIN_NAME )
-			);
+		try {
+			// Ensure that unauthorized people cannot access export action
+			ai1wm_verify_secret_key( $secret_key );
+		} catch ( Ai1wm_Not_Valid_Secret_Key_Exception $e ) {
+			Ai1wm_Log::error( $e->getMessage() );
 			exit;
 		}
 
@@ -87,7 +86,7 @@ class Ai1wm_Export_Controller {
 							Ai1wm_Log::export( $params );
 
 						} catch ( Exception $e ) {
-							Ai1wm_Status::error( $e->getMessage(), __( 'Unable to export', AI1WM_PLUGIN_NAME ) );
+							Ai1wm_Status::error( $e->getMessage() );
 							exit;
 						}
 					}

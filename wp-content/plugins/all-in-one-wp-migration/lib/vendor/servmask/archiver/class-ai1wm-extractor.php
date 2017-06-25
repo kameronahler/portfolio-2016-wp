@@ -26,6 +26,20 @@
 class Ai1wm_Extractor extends Ai1wm_Archiver {
 
 	/**
+	 * Total files count
+	 *
+	 * @type int
+	 */
+	protected $total_files_count = null;
+
+	/**
+	 * Total files size
+	 *
+	 * @type int
+	 */
+	protected $total_files_size = null;
+
+	/**
 	 * Overloaded constructor that opens the passed file for reading
 	 *
 	 * @param string $file File to use as archive
@@ -43,28 +57,37 @@ class Ai1wm_Extractor extends Ai1wm_Archiver {
 	 * @throws \Ai1wm_Not_Readable_Exception
 	 */
 	public function get_total_files_count() {
-		fseek( $this->file_handle, SEEK_SET, 0 );
+		if ( is_null( $this->total_files_count ) ) {
+			// set poisition to the beginning of the file
+			fseek( $this->file_handle, SEEK_SET, 0 );
 
-		// total files count
-		$total_files_count = 0;
+			// total files count
+			$this->total_files_count = 0;
 
-		while ( $block = $this->read_from_handle( $this->file_handle, 4377 ) ) {
-			// end block has been reached
-			if ( $block === $this->eof ) {
-				continue;
+			// total files size
+			$this->total_files_size = 0;
+
+			while ( $block = $this->read_from_handle( $this->file_handle, 4377 ) ) {
+				// end block has been reached
+				if ( $block === $this->eof ) {
+					continue;
+				}
+
+				// get file data from the block
+				$data = $this->get_data_from_block( $block );
+
+				// we have a file, increment the count
+				$this->total_files_count += 1;
+
+				// we have a file, increment the size
+				$this->total_files_size += $data['size'];
+
+				// skip file content so we can move forward to the next file
+				$this->set_file_pointer( $this->file_handle, $data['size'] );
 			}
-
-			// get file data from the block
-			$data = $this->get_data_from_block( $block );
-
-			// we have a file, increment the counter
-			$total_files_count++;
-
-			// skip file content so we can move forward to the next file
-			$this->set_file_pointer( $this->file_handle, $data['size'] );
 		}
 
-		return $total_files_count;
+		return $this->total_files_count;
 	}
 
 	/**
@@ -75,28 +98,37 @@ class Ai1wm_Extractor extends Ai1wm_Archiver {
 	 * @throws \Ai1wm_Not_Readable_Exception
 	 */
 	public function get_total_files_size() {
-		fseek( $this->file_handle, SEEK_SET, 0 );
+		if ( is_null( $this->total_files_size ) ) {
+			// set poisition to the beginning of the file
+			fseek( $this->file_handle, SEEK_SET, 0 );
 
-		// total files size
-		$total_files_size = 0;
+			// total files count
+			$this->total_files_count = 0;
 
-		while ( $block = $this->read_from_handle( $this->file_handle, 4377 ) ) {
-			// end block has been reached
-			if ( $block === $this->eof ) {
-				continue;
+			// total files size
+			$this->total_files_size = 0;
+
+			while ( $block = $this->read_from_handle( $this->file_handle, 4377 ) ) {
+				// end block has been reached
+				if ( $block === $this->eof ) {
+					continue;
+				}
+
+				// get file data from the block
+				$data = $this->get_data_from_block( $block );
+
+				// we have a file, increment the count
+				$this->total_files_count += 1;
+
+				// we have a file, increment the size
+				$this->total_files_size += $data['size'];
+
+				// skip file content so we can move forward to the next file
+				$this->set_file_pointer( $this->file_handle, $data['size'] );
 			}
-
-			// get file data from the block
-			$data = $this->get_data_from_block( $block );
-
-			// we have a file, increment the counter
-			$total_files_size += $data['size'];
-
-			// skip file content so we can move forward to the next file
-			$this->set_file_pointer( $this->file_handle, $data['size'] );
 		}
 
-		return $total_files_size;
+		return $this->total_files_size;
 	}
 
 	public function extract_one_file_to( $location, $exclude = array(), $old_paths = array(), $new_paths = array(), $offset = 0, $timeout = 0 ) {

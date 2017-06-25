@@ -1,5 +1,22 @@
 == Changelog ==
 
+= 1.3.8 =
+- Changed: Available conditional logic rules/functionality with Providers have been updated
+- Changed: Updated form builder modals (jquery-confirm.js)
+- Changed: Many Form Builder performance enhancements
+- Fixed: Number field validation message not saving
+- Fixed: Email confirmation setting not displaying correctly with Small field size
+
+= 1.3.7.4 =
+- Added: Marketing tab in the form builder shows all possible providers.
+
+= 1.3.7.3
+- Fixed: Required setting checkbox getting out of sync when duplicating fields
+- Fixed: CSS class name typo in the form builder layout selector
+- Fixed: Smart Tag `field_id` stripping line breaks
+- Fixed: Form JS settings `wpforms_settings` missing due to some caching plugins
+- Fixed: Empty classes causing `array` string to be printed in some use cases
+
 = 1.3.7.2 =
 - Fixed: Error for some users with PHP 5.4 and below
 
@@ -10,7 +27,7 @@
 - Added: Google Invisible reCAPTCHA support
 - Added: Custom field validation messages (see WPForms Settings page)
 - Added: Bulk add choices for Checkbox, Multiple Choice, and Dropdown fields
-- Addded: Filter to allow email notifications to include empty fields, `wpforms_email_display_empty_fields`
+- Added: Filter to allow email notifications to include empty fields, `wpforms_email_display_empty_fields`
 - Added: Field CSS layout selector
 - Changed: Leverage `wp_json_encode` instead of native PHP function
 - Changed: Various WordPress coding standard improvements (work in progress)

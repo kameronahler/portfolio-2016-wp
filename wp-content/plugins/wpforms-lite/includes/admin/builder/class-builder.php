@@ -195,6 +195,7 @@ class WPForms_Builder {
 		wp_enqueue_media();
 		wp_enqueue_script( 'jquery-ui-sortable' );
 		wp_enqueue_script( 'jquery-ui-draggable' );
+		wp_enqueue_script( 'wp-util' );
 
 		wp_enqueue_script(
 			'serialize-object',
@@ -269,6 +270,7 @@ class WPForms_Builder {
 		);
 
 		$strings = array(
+			'and'                    => __( 'AND', 'wpforms' ),
 			'ajax_url'               => admin_url( 'admin-ajax.php' ),
 			'bulk_add_button'        => __( 'Add New Choices', 'wpforms '),
 			'bulk_add_show'          => __( 'Bulk Add', 'wpforms' ),
@@ -279,11 +281,13 @@ class WPForms_Builder {
 			'bulk_add_presets_hide'  => __( 'Hide presets', 'wpforms '),
 			'date_select_day'        => __( 'DD', 'wpforms' ),
 			'date_select_month'      => __( 'MM', 'wpforms' ),
+			'debug'                  => wpforms_debug(),
 			'dynamic_choice_limit'   => __( 'The {source} {type} contains over {limit} items ({total}). This may make the field difficult for your vistors to use and/or cause the form to be slow.', 'wpforms' ),
 			'cancel'                 => __( 'Cancel', 'wpforms' ),
 			'ok'                     => __( 'OK', 'wpforms' ),
 			'close'                  => __( 'Close', 'wpforms' ),
 			'conditionals_change'    => __( 'Due to form changes, conditional logic rules have been removed or updated:', 'wpforms' ),
+			'conditionals_disable'   => __( 'Are you sure you want to disable conditional logic? This will remove the rules for this field or setting.' ),
 			'field'                  => __( 'Field', 'wpforms' ),
 			'field_locked'           => __( 'Field Locked', 'wpforms' ),
 			'field_locked_msg'       => __( 'This field cannot be deleted or duplicated.', 'wpforms' ),
@@ -324,8 +328,21 @@ class WPForms_Builder {
 			'error_choice'           => __( 'This item must contain at least one choice.', 'wpforms' ),
 			'off'                    => __( 'Off', 'wpforms' ),
 			'on'                     => __( 'On', 'wpforms' ),
+			'or'                     => __( 'or', 'wpforms' ),
 			'other'                  => __( 'Other', 'wpforms' ),
+			'operator_is'            => __( 'is', 'wpforms' ),
+			'operator_is_not'        => __( 'is not', 'wpforms' ),
+			'operator_empty'         => __( 'empty', 'wpforms' ),
+			'operator_not_empty'     => __( 'not empty', 'wpforms' ),
+			'operator_contains'      => __( 'contains', 'wpforms' ),
+			'operator_not_contains'  => __( 'does not contain', 'wpforms' ),
+			'operator_starts'        => __( 'starts with', 'wpforms' ),
+			'operator_ends'          => __( 'ends with', 'wpforms' ),
+			'payments_entries_off'   => __( 'Form entries must be stored to accept payments. Please enable saving form entries in the General settings first.', 'wpforms' ),
 			'previous'               => __( 'Previous', 'wpforms' ),
+			'rule_create'            => __( 'Create new rule', 'wpforms' ),
+			'rule_create_group'      => __( 'Add new group', 'wpforms' ),
+			'rule_delete'            => __( 'Delete rule', 'wpforms' ),
 			'saved_state'            => '',
 			'smart_tags'             => wpforms()->smart_tags->get(),
 			'smart_tags_show'        => __( 'Show Smart Tags', 'wpforms' ),
@@ -385,6 +402,8 @@ class WPForms_Builder {
 		$choices = apply_filters( 'wpforms_builder_preset_choices', $choices );
 
 		echo '<script type="text/javascript">wpforms_preset_choices=' . wp_json_encode( $choices ) . '</script>';
+
+		do_action( 'wpforms_builder_print_footer_scripts' );
 	}
 
 	/**

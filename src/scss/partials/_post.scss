@@ -12,6 +12,13 @@ posts
             }
         }
     }
+
+    // post lead (requires .post__lead class in editor)
+    .post__lead{
+        
+        font-style: italic;
+    }
+
     // entry heading border
     .entry-header {
         &::after {

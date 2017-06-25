@@ -81,7 +81,6 @@ class WPForms_Field_Name extends WPForms_Field {
 						'hidden'   => ! empty( $field['sublabel_hide'] ),
 						'value'    => __( 'First', 'wpforms' ),
 					),
-					'value'    => '',
 				),
 				'middle'       => array(
 					'attr'     => array(
@@ -98,11 +97,11 @@ class WPForms_Field_Name extends WPForms_Field {
 					),
 					'data'     => array(),
 					'id'       => "wpforms-{$form_id}-field_{$field_id}-middle",
+					'required' => '',
 					'sublabel' => array(
 						'hidden'   => ! empty( $field['sublabel_hide'] ),
 						'value'    => __( 'Middle', 'wpforms' ),
 					),
-					'value'    => '',
 				),
 				'last'         => array(
 					'attr'     => array(
@@ -124,7 +123,6 @@ class WPForms_Field_Name extends WPForms_Field {
 						'hidden'   => ! empty( $field['sublabel_hide'] ),
 						'value'    => __( 'Last', 'wpforms' ),
 					),
-					'value'    => '',
 				),
 			),
 		);
@@ -401,9 +399,10 @@ class WPForms_Field_Name extends WPForms_Field {
 	 *
 	 * @since 1.0.0
 	 * @param array $field
+	 * @param array $deprecated
 	 * @param array $form_data
 	 */
-	public function field_display( $field, $field_atts, $form_data ) {
+	public function field_display( $field, $deprecated, $form_data ) {
 
 		// Define data.
 		$form_id = absint( $form_data['id'] );
@@ -443,8 +442,9 @@ class WPForms_Field_Name extends WPForms_Field {
 				if ( 'first-middle-last' === $format ) {
 					echo '<div ' . wpforms_html_attributes( false, $middle['block'] ) . '>';
 						$this->field_display_sublabel( 'middle', 'before', $field );
-						printf( '<input type="text" %s>',
-							wpforms_html_attributes( $middle['id'], $middle['class'], $middle['data'], $middle['attr'] )
+						printf( '<input type="text" %s %s>',
+							wpforms_html_attributes( $middle['id'], $middle['class'], $middle['data'], $middle['attr'] ),
+							$middle['required']
 						);
 						$this->field_display_sublabel( 'middle', 'after', $field );
 						$this->field_display_error( 'middle', $field );

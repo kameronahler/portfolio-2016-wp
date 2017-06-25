@@ -40,7 +40,7 @@
 					WPFormsBuilderLite.upgradeModal($(this).text()+ ' panel');
 				}
 			});
-			
+
 			// WPForms upgrade field modal
 			$(document).on('click', '.wpforms-add-fields-button', function(e) {
 				if ($(this).hasClass('upgrade-modal')){
@@ -57,12 +57,21 @@
 					e.stopImmediatePropagation();
 					WPFormsBuilderLite.upgradeModal($(this).data('template-name'));
 				}
-			});		
+			});
+
+			// WPForms upgrade providers modal
+			$(document).on('click', '.wpforms-panel-sidebar-section', function(e) {
+				if ($(this).hasClass('upgrade-modal')){
+					e.preventDefault();
+					e.stopImmediatePropagation();
+					WPFormsBuilderLite.upgradeModal($(this).data('name'));
+				}
+			});
 		},
 
 		/**
 		 * Trigger modal for upgrade.
-		 * 
+		 *
 		 * @since 1.0.0
 		 */
 		upgradeModal: function(feature) {
@@ -72,12 +81,20 @@
 				title: feature+' '+wpforms_builder_lite.upgrade_title,
 				icon: 'fa fa-lock',
 				content: message,
-				confirmButton: wpforms_builder_lite.upgrade_button,
-				columnClass: 'modal-wide',
-				confirm: function () {
-					window.open(wpforms_builder_lite.upgrade_url,'_blank');
-				},
-			});	
+				buttons: {
+					confirm: {
+						text: wpforms_builder_lite.upgrade_button,
+						btnClass: 'btn-confirm',
+						keys: ['enter'],
+						action: function () {
+							window.open(wpforms_builder_lite.upgrade_url,'_blank');
+						}
+					},
+					cancel: {
+						text: wpforms_builder.ok
+					}
+				}
+			});
 		},
 	};
 

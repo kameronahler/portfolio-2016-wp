@@ -769,7 +769,7 @@ function ai1wm_urldecode( $value ) {
  * @param  string $file Path to the file to open
  * @param  string $mode Mode in which to open the file
  * @return resource
- * @throws Exception
+ * @throws Ai1wm_Not_Accesible_Exception
  */
 function ai1wm_open( $file, $mode ) {
 	$file_handle = fopen( $file, $mode );
@@ -786,7 +786,8 @@ function ai1wm_open( $file, $mode ) {
  * @param  resource $handle  File handle to write to
  * @param  string   $content Contents to write to the file
  * @return int
- * @throws Exception
+ * @throws Ai1wm_Not_Writable_Exception
+ * @throws Ai1wm_Quota_Exceeded_Exception
  */
 function ai1wm_write( $handle, $content ) {
 	$write_result = fwrite( $handle, $content );
@@ -807,7 +808,7 @@ function ai1wm_write( $handle, $content ) {
  * @param  resource $handle   File handle to read from
  * @param  string   $filesize File size
  * @return int
- * @throws Exception
+ * @throws Ai1wm_Not_Readable_Exception
  */
 function ai1wm_read( $handle, $filesize ) {
 	$read_result = fread( $handle, $filesize );
@@ -928,4 +929,19 @@ function ai1wm_disable_jetpack_photon() {
 	if ( ( $jetpack = get_option( AI1WM_JETPACK_ACTIVE_MODULES, array() ) ) ) {
 		update_option( AI1WM_JETPACK_ACTIVE_MODULES, array_values( array_diff( $jetpack, array( 'photon' ) ) ) );
 	}
+}
+
+/**
+ * Verify secret key
+ *
+ * @param  string $secret_key Secret key
+ * @return bool
+ * @throws Ai1wm_Not_Valid_Secret_Key_Exception
+ */
+function ai1wm_verify_secret_key( $secret_key ) {
+	if ( $secret_key !== get_option( AI1WM_SECRET_KEY ) ) {
+		throw new Ai1wm_Not_Valid_Secret_Key_Exception( __( 'Unable to authenticate the secret key.', AI1WM_PLUGIN_NAME ) );
+	}
+
+	return true;
 }

@@ -212,6 +212,7 @@ class WPForms_Settings {
 					$this->options['validation-required']        = ! empty( $_POST['validation-required'] ) ? sanitize_text_field( $_POST['validation-required'] ) : '';
 					$this->options['validation-url']             = ! empty( $_POST['validation-url'] ) ? sanitize_text_field( $_POST['validation-url'] ) : '';
 					$this->options['validation-email']           = ! empty( $_POST['validation-email'] ) ? sanitize_text_field( $_POST['validation-email'] ) : '';
+					$this->options['validation-number']          = ! empty( $_POST['validation-number'] ) ? sanitize_text_field( $_POST['validation-number'] ) : '';
 					$this->options['validation-confirm']         = ! empty( $_POST['validation-confirm'] ) ? sanitize_text_field( $_POST['validation-confirm'] ) : '';
 
 					$this->options = apply_filters( 'wpforms_settings_save', $this->options, $_POST, 'general' );
