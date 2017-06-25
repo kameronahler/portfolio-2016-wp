@@ -4,4 +4,9 @@
 	.main{
 		max-width:1170pxi;
 	}
+	.excerpt{
+		@include bp(sm){
+			margin-bottom:4rem;
+		}
+	}
 }

@@ -21,6 +21,8 @@
 	}
 	// card
 	.excerpt{
+		margin-bottom:4rem;
+		
 		@include bp(md){
 			width:calc(33.33334% - 1.5rem);
 			background-color:#fff;

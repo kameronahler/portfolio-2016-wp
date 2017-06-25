@@ -207,7 +207,7 @@ module.exports = function(grunt) {
     // Load plugins
     grunt.loadNpmTasks('grunt-sass'); //libsass
     grunt.loadNpmTasks('grunt-postcss');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    //grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-notify');
     grunt.loadNpmTasks('grunt-px-to-rem');
@@ -217,13 +217,13 @@ module.exports = function(grunt) {
         'sass:dev',
         'px_to_rem:dev',
         'postcss:dev',
-        'uglify:dev'
+        //'uglify:dev'
     ]);
 
     grunt.registerTask('build', [
         'sass:build',
         'px_to_rem:build',
         'postcss:build',
-        'uglify:build'
+        //'uglify:build'
     ]);
 };

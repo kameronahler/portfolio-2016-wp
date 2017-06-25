@@ -3,12 +3,14 @@ post cards on homepage or category pages
 ------------------------- */
 // post wrapper
 .excerpt{
+	opacity:initial;
+
 	@include bp(sm){
 		background:inherit;
 	}
 
 	@include bp(md){
-		margin-bottom:3rem;
+		// margin-bottom:3rem;
 		box-shadow:$box-shadow-postexcerpt;
 		transition: $transition-excerpt;
 		&:hover{
@@ -16,16 +18,38 @@ post cards on homepage or category pages
 		}
 	}
 
-	// post thumbnail for even thumbnails
-	// &.even{
-	// 	.featured-image{
-	// 		right:0;
-	// 		left:initial;
+	&:hover{
+		.featured-image{
+			&::before{
+				background:rgba(#263238,0);
+			}
+		}
+	}
+
+	// feature image link wrapper
+	// .featured-image-link{
+	// 	@include bp(md){
+	// 		@include absolute(0,0);
+	// 		width:100%;
+	// 		height:100%;
+	// 		display:block;
+	// 		z-index:99;
 	// 	}
-	// 	.excerpt-container{
-	// 		float:initial;
-	// 	}
-	// }
+	// }	
+
+	// featured image overlay
+	.featured-image{
+		&::before{
+			@include absolute(0,0);
+			content:"";
+			display:block;
+			width:100%;
+			height:100%;
+			background:rgba(#263238,.75);
+			z-index:1;
+			transition:.3s ease;
+		}
+	}
 }
 
 // text wrapper
