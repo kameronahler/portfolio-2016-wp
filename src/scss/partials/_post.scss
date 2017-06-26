@@ -4,12 +4,44 @@ posts
 
 .entry {
     box-shadow: $box-shadow-content;
+
     // featured-image
     .featured-image {
+        &::before{
+            @include absolute(0,0);
+            content:"";
+            width:100%;
+            height:100%;
+            display:block;
+            background:linear-gradient(5deg, rgba($color-card-img-overlay,.2) 0%, rgba($color-card-img-overlay,.75) 100%);
+            
+        }
         &::after {
             @include bp(md) {
                 content: none;
             }
+        }
+    }
+
+    // all post images
+    .entry-content{
+        
+        // img
+        img{
+            box-shadow:$box-shadow-card;
+        }
+        
+        // figures
+        figure{
+            img{
+                margin-bottom:0;
+            }
+        }
+
+        // captions for figure images
+        .wp-caption-text{
+            margin-top:1em;
+            display:inline-block;
         }
     }
 
@@ -57,7 +89,6 @@ posts
                 // text-decoration: underline;
                 text-transform: uppercase;
             }
-
         }
     }
     // further reading nav
