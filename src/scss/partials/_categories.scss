@@ -11,12 +11,11 @@
 
 	// card container
 	.loop-container{
-		@include bp(md){
+		@include bp(sm){
+			@include flex(flex-start,stretch);
 			width:100%;
 			height:100%;
-			display:flex;
-			flex-flow:row wrap;
-			justify-content:space-between;
+			flex-wrap:wrap;
 		}
 	}
 	// card
@@ -24,9 +23,14 @@
 		margin-bottom:4rem;
 		
 		@include bp(md){
-			width:calc(33.33334% - 1.5rem);
+			width:calc(50% - 1.5rem);
 			background-color:#fff;
 			margin-bottom:2.25rem;
+			margin-left:.75rem;
+			margin-right:.75rem;
+		}
+		@include bp(lg){
+			width:calc(33.33334% - 1.5rem);
 		}
 	}
 	// img

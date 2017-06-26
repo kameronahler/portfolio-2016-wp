@@ -60,6 +60,9 @@ top header
 
 .menu-primary-items{
 	li{
+        @include bp(sm){
+            vertical-align:top;
+        }
 		&::after{
 			color:$color-a;
 
